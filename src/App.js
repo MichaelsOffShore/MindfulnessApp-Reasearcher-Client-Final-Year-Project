@@ -23,7 +23,7 @@ function App() {
 
 function exportTokens(){
 
-const fileUrl = 'http://localhost:8000/downloadFile';
+const fileUrl = 'https://prickly-waistcoat-cod.cyclic.app/downloadFile';
 const fileName = 'tokens.csv';
 fetch(fileUrl)
   .then(response => response.blob())
@@ -138,7 +138,7 @@ fetch(fileUrl)
       tokenData["link"] = "";
     }
     axios
-      .post("http://localhost:8000/generateToken", tokenData)
+      .post("https://prickly-waistcoat-cod.cyclic.app/generateToken", tokenData)
       .then(function (response) {
         console.log("Data: " + response.data);
         alert("Token Generation Successful!")
