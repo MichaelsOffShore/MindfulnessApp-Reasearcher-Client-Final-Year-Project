@@ -1,0 +1,69 @@
+body{
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  align-content: center;
+  text-align: center;
+  margin: 0 auto;
+  color: whitesmoke;
+  height: 100%; 
+  background: url("../Images/starry-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.header{
+  margin-top: 15vh;
+}
+
+.container{
+  margin-top: -11rem;
+}
+.header {
+  position: fixed;
+  top: -5rem;
+  left: 0;
+  width: 100%;
+  font-size: 45px;
+}
+#quantity{
+  width: 6vh;
+}
+#temp{
+align-items: left;
+}
+#logo{
+  scale: 0.4;
+  border-radius: 5rem;
+  transition: transform 0.5s; 
+  margin-top: -6rem;
+}
+#logo:hover {
+  transform: scale(1.1); 
+}
+#exportButton{
+  background-color: tomato;
+  color: white;
+  border-radius: 2rem;
+  scale: 1.5;
+  transition: transform 0.5s; 
+
+}
+#exportButton:hover{
+    transform: scale(1.2); 
+}
+
+#generateButton{
+  background-color: green;
+  color: white;
+  border-radius: 2rem;
+  scale: 1.5;
+  transition: transform 0.5s; 
+
+}
+#generateButton:hover{
+    transform: scale(1.2); 
+}
+
