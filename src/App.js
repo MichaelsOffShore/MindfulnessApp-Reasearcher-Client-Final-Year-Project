@@ -6,12 +6,7 @@ import { useState } from "react";
 import logo from './Images/logo.jpg';
 
 function App() {
-  // establish connection to database
-
-  // start of token is random so cant manipulate
-  // generate bulk tokens e.g 10 anjd store in databvase
-  // export all tokens as comma seperatewd value file (csv file)
-
+ 
   const [kentucky, setKentuckyChecked] = useState(false);
   const [toronto, setTorontoChecked] = useState(false);
   const [maas, setMAASChecked] = useState(false);
@@ -47,7 +42,7 @@ fetch(fileUrl)
 
   const handleChange = (event) => {
     let elementID = event.target.name;
-    // invert the boolean
+    
     switch(elementID){
 
       case "kentucky":
@@ -82,13 +77,7 @@ fetch(fileUrl)
 
 
   function generateTokens() {
-    // kentucky inventory = "KI"
-    // toronto mindfulness = "TO"
-    // MAAS = "MA"
-    // Langer mindfulness test = "LA"
-    // Philadelphia mindfulness test = "PH"
-    // build test keys
-    // eg"KIMA"
+   
     let tKeys = "";
     if(kentucky){
       tKeys += "KI";
@@ -111,19 +100,12 @@ fetch(fileUrl)
     if(task){
       tKeys += "TA";
     }
-    /*
-    if(kentucky){
-      console.log("Kentucky is true");
-      tKeys += "KI";
-    }
-    */
     
     let tokenData = {
       "testKeys": tKeys,
       "numOfTokens": (document.getElementById("quantity").value),
       "link": (document.getElementById("taskLink").value)
     };
-    // check if numoftookens is 1 or more
     if(tokenData["numOfTokens"] <= 0 || tokenData["numOfTokens"] > 20){
       alert("Number of tokens must be between 1 and 20!")
       return;
@@ -206,8 +188,6 @@ fetch(fileUrl)
             <input type="text" name="taskLink" id="taskLink" defaultValue=""/>
         </label>
 
-
-        
         <br />
         <br />
         <button id="generateButton" onClick={generateTokens}>Generate</button>
